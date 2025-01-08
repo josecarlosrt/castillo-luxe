@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
+    "@fontsource/playfair-display": "^5.1.1",
     "@fontsource/poppins": "^5.0.8",
     "tailwindcss": "^3.3.3"
   },
