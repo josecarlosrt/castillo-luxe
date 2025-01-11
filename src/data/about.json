@@ -1,14 +1,22 @@
 [
 	{
-		"title": "residential",
+		"title": "demolition",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
 	},
 	{
-		"title": "bussines",
+		"title": "siding",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
 	},
     {
-		"title": "industrial",
+		"title": "remodeling",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+	},
+	{
+		"title": "landscaping",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+	},
+	{
+		"title": "gutters",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
 	}
 ]
