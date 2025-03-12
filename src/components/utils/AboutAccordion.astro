@@ -36,6 +36,7 @@ const { open } = Astro.props;
 		}
 	});
 </script>
+
 <div>
 	<ul id="acordeon" class="flex items-center flex-col gap-6">
 		{
@@ -54,10 +55,10 @@ const { open } = Astro.props;
 								src="svg/arrow.svg"
 								alt="arrow"
 								style={`${
-								i === open
-									? "rotate : 90deg;"
-									: "rotate : 0deg;"
-							}`}
+									i === open
+										? "rotate : 90deg;"
+										: "rotate : 0deg;"
+								}`}
 							/>
 						</header>
 						<div
@@ -72,6 +73,12 @@ const { open } = Astro.props;
 								<p class="mb-4 pt-2 text-sm opacity-50 md:text-base">
 									{e.description}
 								</p>
+								<!-- Add the image here -->
+								<img
+									src={e.image}
+									alt={e.title}
+									class="w-full h-auto rounded-lg"
+								/>
 							</div>
 						</div>
 					</li>

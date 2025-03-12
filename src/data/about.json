@@ -1,22 +1,27 @@
 [
 	{
 		"title": "demolition",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+		"description": "Our demolition services provide a clean and efficient start to your project. Whether you need selective dismantling or full-scale removal, we handle the job safely and responsibly. We ensure thorough site cleanup, preparing your space for the next phase of construction",
+		"image": "/images/buildings/demolition.png"
 	},
 	{
 		"title": "siding",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+		"description": "Enhance your home's curb appeal and protection with our professional siding services. We offer a variety of siding materials and styles to match your aesthetic and budget",
+		"image": "/images/buildings/siding.png"
 	},
     {
 		"title": "remodeling",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+		"description": "From minor updates to major renovations, we offer a full range of remodeling services. Our experienced team can handle any project, big or small, with professionalism and expertise. We'll guide you through the process, delivering exceptional results that exceed your expectations",
+		"image": "/images/buildings/remodeling.png"
 	},
 	{
 		"title": "landscaping",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+		"description": "Our landscaping services cover all your outdoor needs. We provide everything from lawn care and planting to hardscape installation and maintenance, ensuring your property looks its best year-round",
+		"image": "/images/buildings/landscaping.png"
 	},
 	{
-		"title": "gutters",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta tortor eu congue commodo. Aliquam erat volutpat. Sed dui arcu, rutrum vel imperdiet non, sagittis ac urna"
+		"title": "roofing",
+		"description": "Ensure the integrity of your home with our professional roofing services. We offer reliable installation and repair, protecting your investment with quality materials and expert craftsmanship.",
+		"image": "/images/buildings/roofing.png"
 	}
 ]
