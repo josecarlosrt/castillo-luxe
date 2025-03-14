@@ -4,55 +4,31 @@ import ContactInput from "../utils/ContactInput.astro";
 ---
 
 <section class="mb-20">
-  <h2 class="text-title mb-8">keep in touch with us</h2>
+  <h2 class="text-title mb-8">Keep in touch with us</h2>
   <form 
     id="contact-form"
     class="grid gap-4 grid-cols-1 md:grid-cols-2 md:gap-8"
+    name="contact-form"
     data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/success"
+    method="POST"
   >
-    <ContactInput id="1" label="name" placeholder="input your name" />
-    <ContactInput id="2" type="number" label="phone" placeholder="enter phone number" />
-    <ContactInput id="3" type="email" label="email" placeholder="enter your email" />
-    <ContactInput id="4" type="text" label="message" placeholder="send us your message here" />
+    <input type="hidden" name="form-name" value="contact-form" />
+    <p class="hidden">
+      <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </p>
+
+    <ContactInput id="1" label="name" name="name" placeholder="Input your name" required />
+    <ContactInput id="2" type="number" label="phone" name="phone" placeholder="Enter phone number" required />
+    <ContactInput id="3" type="email" label="email" name="email" placeholder="Enter your email" required />
+    <ContactInput id="4" type="text" label="message" name="message" placeholder="Send us your message here" required />
 
     <div class="col-span-2 flex justify-center">
       <div>
-        <CheapButton>Send Message</CheapButton>
+        <CheapButton type="submit">Send Message</CheapButton>
       </div>
     </div>
-
-    <!-- Success Message -->
-    <p id="success" class="col-span-2 text-green-600 text-center hidden">Message sent successfully!</p>
-    
-    <!-- Error Message -->
-    <p id="error" class="col-span-2 text-red-600 text-center hidden">Something went wrong. Try again.</p>
   </form>
 </section>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  if (!form) return;
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    
-    try {
-      await fetch("/", {
-        method: "POST",
-        body: formData,
-      });
-
-      document.getElementById("success")?.classList.remove("hidden");
-      setTimeout(() => {
-        document.getElementById("success")?.classList.add("hidden");
-      }, 5000);
-    } catch {
-      document.getElementById("error")?.classList.remove("hidden");
-    }
-  });
-});
-</script>
 
