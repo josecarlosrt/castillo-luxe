@@ -1,61 +1,58 @@
 ---
 import CheapButton from "../utils/CheapButton.astro";
 import ContactInput from "../utils/ContactInput.astro";
+---
 
-const handleSubmit = (event: Event) => {
-    event.preventDefault();
-    
-    const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
-  
-    fetch("/", {
-      method: "POST",
-      body: formData,
-    })
-    .then(() => {
-      const successElement = document.getElementById("success");
-      if (successElement) {
-        successElement.classList.remove("hidden");
-      }
-      setTimeout(() => {
-        const successElement = document.getElementById("success");
-        if (successElement) {
-          successElement.classList.add("hidden");
-        }
-      }, 5000);
-    })
-    .catch(() => {
-      const errorElement = document.getElementById("error");
-      if (errorElement) {
-        errorElement.classList.remove("hidden");
-      }
-    });
-  };
-  ---
-  
-  <section class="mb-20">
-    <h2 class="text-title mb-8">keep in touch with us</h2>
-    <form 
-      class="grid gap-4 grid-cols-1 md:grid-cols-2 md:gap-8"
-      data-netlify="true"
-      onsubmit="handleSubmit(event)"
-    >
-      <ContactInput id="1" label="name" placeholder="input your name" />
-      <ContactInput id="2" type="number" label="phone" placeholder="enter phone number" />
-      <ContactInput id="3" type="email" label="email" placeholder="enter your email" />
-      <ContactInput id="4" type="text" label="message" placeholder="send us your message here" />
-  
-      <div class="col-span-2 flex justify-center">
-        <div>
-          <CheapButton>Send Message</CheapButton>
-        </div>
+<section class="mb-20">
+  <h2 class="text-title mb-8">keep in touch with us</h2>
+  <form 
+    id="contact-form"
+    class="grid gap-4 grid-cols-1 md:grid-cols-2 md:gap-8"
+    data-netlify="true"
+  >
+    <ContactInput id="1" label="name" placeholder="input your name" />
+    <ContactInput id="2" type="number" label="phone" placeholder="enter phone number" />
+    <ContactInput id="3" type="email" label="email" placeholder="enter your email" />
+    <ContactInput id="4" type="text" label="message" placeholder="send us your message here" />
+
+    <div class="col-span-2 flex justify-center">
+      <div>
+        <CheapButton>Send Message</CheapButton>
       </div>
-  
-      <!-- Success Message -->
-      <p id="success" class="col-span-2 text-green-600 text-center hidden">Message sent successfully!</p>
-      
-      <!-- Error Message -->
-      <p id="error" class="col-span-2 text-red-600 text-center hidden">Something went wrong. Try again.</p>
-    </form>
-  </section>
-  
+    </div>
+
+    <!-- Success Message -->
+    <p id="success" class="col-span-2 text-green-600 text-center hidden">Message sent successfully!</p>
+    
+    <!-- Error Message -->
+    <p id="error" class="col-span-2 text-red-600 text-center hidden">Something went wrong. Try again.</p>
+  </form>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  if (!form) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      document.getElementById("success")?.classList.remove("hidden");
+      setTimeout(() => {
+        document.getElementById("success")?.classList.add("hidden");
+      }, 5000);
+    } catch {
+      document.getElementById("error")?.classList.remove("hidden");
+    }
+  });
+});
+</script>
+
