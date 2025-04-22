@@ -79,6 +79,11 @@ const { open } = Astro.props;
 									alt={e.title}
 									class="w-full h-auto rounded-lg"
 								/>
+								{e.title === "siding" && (
+									<a href="/siding" class="btn mt-4 inline-block text-sm text-neutral-500 underline hover:text-white transition-colors">
+									See more
+									</a>
+								)}
 							</div>
 						</div>
 					</li>

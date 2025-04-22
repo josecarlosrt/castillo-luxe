@@ -1,0 +1,33 @@
+---
+import Wrapper from "../components/utils/Wrapper.astro";
+import BaseLayout from "../layout/BaseLayout.astro";
+import Header from "../components/sections/Header.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/images/another/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Castillo Luxe - Siding Work Gallery</title>
+	</head>
+	<body>
+		<BaseLayout>
+			<Wrapper>
+                <Header />
+                <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8">
+                    <h2 class="text-title">Siding Gallery</h2>
+                  </header>
+                  <section class="mb-8 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[300px]">
+                    <img src="/images/work/siding-two.png" alt="Image of a house construction" class="object-cover w-full h-full rounded-xl col-span-2 row-span-2" />
+                    <img src="/images/work/siding-three.png" alt="Image of a house construction" class="object-cover w-full h-full rounded-xl" />
+                    <img src="/images/work/siding-four.png" alt="Image of a wood siding construction" class="object-cover w-full h-full rounded-xl" />
+                    <img src="/images/work/siding-one.png" alt="Image of a wood siding construction" class="object-cover w-full h-full rounded-xl col-span-2" />
+                    <img src="/images/work/siding-five.png" alt="Image of a wood siding construction" class="object-cover w-full h-full rounded-xl" />
+                    <img src="/images/work/siding-six.png" alt="Image of a wood siding construction" class="object-cover w-full h-full rounded-xl" />
+                  </section>
+			</Wrapper>
+		</BaseLayout>
+	</body>
+</html>
